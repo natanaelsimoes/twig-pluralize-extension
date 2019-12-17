@@ -1,21 +1,12 @@
 <?php
 
-namespace Tomodomo\Twig;
+namespace NatanaelSimoes\Twig;
 
-use Exception;
-use Twig_Extension;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class Pluralize extends Twig_Extension
-{
-    /**
-     * Returns the name of this extension
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return 'pluralize';
-    }
+class Pluralize extends AbstractExtension
+{    
 
     /**
      * Returns the functions this extension adds
@@ -25,7 +16,7 @@ class Pluralize extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction(
+            new TwigFunction(
                 'pluralize',
                 [$this, 'getPluralizedString']
             )
@@ -50,24 +41,14 @@ class Pluralize extends Twig_Extension
     {
         // Make sure $count is a numeric value
         if (!is_numeric($count)) {
-            throw new Exception('$count must be numeric.');
+            throw new \Exception('$count must be numeric.');
         }
 
         // If the option for $none is null, use the option for $many
         $none = $none ?? $many;
 
         // Choose the correct string
-        switch($count) {
-            case 0:
-                $string = $none;
-                break;
-            case 1:
-                $string = $one;
-                break;
-            default:
-                $string = $many;
-                break;
-        }
+        $string = $count === 0 ? $none : $count === 1 ? $one : $many;        
 
         // Return the result
         return sprintf($string, $count);

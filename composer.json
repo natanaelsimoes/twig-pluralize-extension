@@ -1,21 +1,21 @@
 {
-  "name": "tomodomo/twig-pluralize-extension",
+  "name": "natanaelsimoes/twig-pluralize-extension",
   "description": "Twig extension to output correctly pluralized strings",
   "keywords": ["twig extension", "plural", "twig"],
   "type": "library",
-  "license": "BSD-3-Clause",
+  "license": "MIT License",
   "require": {
     "php": ">=5.4.0",
-    "twig/twig": ">=v1.0.0"
+    "twig/twig": ">=v2.12.0"
   },
-  "homepage": "https://tomodomo.co/",
+  "homepage": "https://github.com/natanaelsimoes/twig-pluralzie-extension/",
   "authors": [
     {
-      "name": "Tomodomo",
-      "homepage": "https://tomodomo.co/"
+      "name": "Natanael Simões",
+      "homepage": "https://natanaelsimoes.github.io/"
     }
   ],
   "autoload": {
-    "psr-4": { "Tomodomo\\Twig\\": "src/" }
+    "psr-4": { "NatanaelSimoes\\Twig\\": "src/" }
   }
 }

@@ -7,7 +7,7 @@ A simple extension for Twig that allows you to pluralize a given string.
 Register the function, then reference it in your template:
 
 ```twig
-This section has {{pluralize(categories|length, 'one category', '%d categories', 'no categories')}}.
+This section has {{ pluralize(categories|length, 'one category', '%d categories', 'no categories') }}.
 ```
 
 Given the values 0, 1, and 5, the above would output:
@@ -21,7 +21,7 @@ Given the values 0, 1, and 5, the above would output:
 The last parameter (the "zero items" string) is optional. If omitted, the 3rd parameter (the "many items" string) will be used, as in the following:
 
 ```twig
-This section has {{pluralize(categories|length, 'one category', '%d categories')}}.
+This section has {{ pluralize(categories|length, 'one category', '%d categories') }}.
 ```
 
 ```html
@@ -32,11 +32,9 @@ This section has {{pluralize(categories|length, 'one category', '%d categories')
 
 The strings are passed through sprintf. You can use the %d token to insert the count into your string, if desired.
 
-## About Tomodomo
+## Contributing
 
-Tomodomo is a creative agency for magazine publishers. We use custom design and technology to speed up your editorial workflow, engage your readers, and build sustainable subscription revenue for your business.
-
-Learn more at [tomodomo.co](https://tomodomo.co) or email us: [hello@tomodomo.co](mailto:hello@tomodomo.co)
+If you have composer install, run `composer install` but if you want to run it in a container, run `docker-[so].sh` or `docker-windows.bat` accordingly to your system.
 
 ## License & Conduct
 
