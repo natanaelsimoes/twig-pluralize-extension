@@ -9,7 +9,7 @@ Register the function at `services.yaml` if your're using Symfony:
 ```yaml
 #[....]
 Pluralize:
-    class: NatanaelSimoes\Twig\Pluralize
+    class: NatanaelSimoes\Twig\Extension\Pluralize
     tags:
         - twig.extension
 ```
