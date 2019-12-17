@@ -4,7 +4,17 @@ A simple extension for Twig that allows you to pluralize a given string.
 
 ## Usage
 
-Register the function, then reference it in your template:
+Register the function at `services.yaml` if your're using Symfony:
+
+```yaml
+#[....]
+Pluralize:
+    class: NatanaelSimoes\Twig\Pluralize
+    tags:
+        - twig.extension
+```
+
+then reference it in your template:
 
 ```twig
 This section has {{ pluralize(categories|length, 'one category', '%d categories', 'no categories') }}.
