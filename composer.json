@@ -16,6 +16,6 @@
     }
   ],
   "autoload": {
-    "psr-4": { "NatanaelSimoes\\Twig\\": "src/" }
+    "psr-4": { "NatanaelSimoes\\Twig\\Extension\\": "src" }
   }
 }
