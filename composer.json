@@ -3,7 +3,7 @@
   "description": "Twig extension to output correctly pluralized strings",
   "keywords": ["twig extension", "plural", "twig"],
   "type": "library",
-  "license": "MIT License",
+  "license": "MIT",
   "require": {
     "php": ">=5.4.0",
     "twig/twig": ">=v2.12.0"
