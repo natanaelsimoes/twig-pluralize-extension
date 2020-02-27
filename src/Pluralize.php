@@ -48,7 +48,7 @@ class Pluralize extends AbstractExtension
         $none = $none ?? $many;
 
         // Choose the correct string
-        $string = $count === 0 ? $none : $count === 1 ? $one : $many;        
+        $string = (($count === 0) ? $none : (($count === 1) ? $one : $many));        
 
         // Return the result
         return sprintf($string, $count);
